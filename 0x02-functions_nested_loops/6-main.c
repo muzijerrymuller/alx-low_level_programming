@@ -6,6 +6,7 @@
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
     int r;
@@ -19,4 +20,17 @@ int main(void)
     r = _abs(-98);
     printf("%d\n", r);
     return (0);
+}
+
+/**
+ * _abs - Calculate value of an integer.
+ * @n: int input
+ * Return: value of n.
+ */
+int _abs(int n)
+{
+    if (n < 0)
+        return -n;
+    else
+        return n;
 }
