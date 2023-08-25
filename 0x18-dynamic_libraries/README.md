@@ -1,1 +1,1 @@
-dynamic libraries
+DYNAMIC LIBRARIES
