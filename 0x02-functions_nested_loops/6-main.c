@@ -21,16 +21,3 @@ int main(void)
     printf("%d\n", r);
     return (0);
 }
-
-/**
- * _abs - Calculate value of an integer.
- * @n: int input
- * Return: value of n.
- */
-int _abs(int n)
-{
-    if (n < 0)
-        return -n;
-    else
-        return n;
-}
