@@ -16,5 +16,8 @@ int _abs(int n)
 		return (abs_val);
 		}
 		return (n);
-		return ('\n')
+		
 	}
+}
+return ('\n')
+}
