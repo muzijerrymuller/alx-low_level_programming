@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_last_digit: Last dif=git of num print.
+ * _abs val: Last digit of num print.
  * @n: int to get the last digit from.
  * Return: Last digit value.
  */
@@ -14,4 +14,4 @@ int _abs(int n)
 	return (abs_val);
 	}
 	return (n);
-}	
+}
