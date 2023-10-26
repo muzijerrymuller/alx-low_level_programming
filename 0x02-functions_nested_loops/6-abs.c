@@ -1,11 +1,9 @@
 #include "main.h"
-
 /**
- * print_last_digit -Last dif=git of num print
- * @n: int to get the last digit from
- * Return: Last digit value
+ * print_last_digit: Last dif=git of num print.
+ * @n: int to get the last digit from.
+ * Return: Last digit value.
  */
-
 int _abs(int n)
 {
 	if (n < 0)
