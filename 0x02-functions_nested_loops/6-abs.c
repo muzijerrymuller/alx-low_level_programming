@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _abs val: Last digit of num print.
+ * abs val: Last digit of num print.
  * @n: int to get the last digit from.
  * Return: Last digit value.
  */
