@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _abs val- Print  man last digit of a num.
+ * _abs val - Print man last digit of a number.
  * @n: int to get the last digit from.
  * Return: Last digit value.
  */
