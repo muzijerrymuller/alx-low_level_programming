@@ -1,5 +1,6 @@
-#include <stdio>
+#include <stdio.h>
 #include <stdlib.h>
+
 /**
  * div- divide two int's.
  * @a- first int.
@@ -7,8 +8,7 @@
  * Return: the sum.
  */
 
-int div(int a, int b)
-
+int div(int a,int b)
 {
 	return (a / b);
 }
