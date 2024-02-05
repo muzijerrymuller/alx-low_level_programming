@@ -18,4 +18,3 @@ fclean: clean oclean
 	$(RM) $(NAME)
 
 re: fclean all
-
