@@ -1,22 +1,30 @@
-COMPILER = gcc
+CC := gcc
 
-SOURCE_FILES = main.c school.c
 
-OBJECT_FILES = $(SOURCE_FILES:.c=.o)
+SRC := main.c school.c
 
-EXECUTABLE_NAME = school
 
-REMOVE_CMD = rm -f
+OBJ := $(SRC:.c=.o)
 
-all: $(OBJECT_FILES)
-	$(COMPILER) $(OBJECT_FILES) -o $(EXECUTABLE_NAME)
+
+NAME := school
+
+
+RM := rm -f
+
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
 
 clean:
-	$(REMOVE_CMD) *~ $(EXECUTABLE_NAME)
+	$(RM) *~ $(NAME)
+
 
 oclean:
-	$(REMOVE_CMD) $(OBJECT_FILES)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
+
 
 re: fclean all
