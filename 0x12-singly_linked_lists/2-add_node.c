@@ -26,5 +26,5 @@ new->len = len;
 new->next = (*head);
 (*head) = new;
 
- return (*head);
+return (*head);
 }
