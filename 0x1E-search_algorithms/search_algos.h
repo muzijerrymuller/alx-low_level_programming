@@ -1,12 +1,21 @@
+#ifndef SEARCH_ALGOS_H
+#define SEARCH_ALGOS_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
 /**
  * struct listint_s - singly linked list
- * @n: An integer value stored in the node
- * @index: The position of the node in the list
- * @next: A pointer to the next node in the list
- * Description: A structure representing a node in a singly linked list
- * for a Holberton project
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ *
+ * Description: singly linked list node structure
+ * for Holberton project
  */
-
 typedef struct listint_s
 {
     int n;
@@ -14,17 +23,19 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 
+
+
 /**
  * struct skiplist_s - Singly linked list with an express lane
- * @n: An integer value stored in the node
- * @index: The position of the node in the list
- * @next: A pointer to the next node in the list
- * @express: A pointer to the next node in the express lane
  *
- * Description: A structure representing a node in a singly linked list
- * with an express lane, used for a Holberton project
- */i
-
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ * @express: Pointer to the next node in the express lane
+ *
+ * Description: singly linked list node structure with an express lane
+ * for Holberton project
+ */
 typedef struct skiplist_s
 {
     int n;
@@ -32,3 +43,17 @@ typedef struct skiplist_s
     struct skiplist_s *next;
     struct skiplist_s *express;
 } skiplist_t;
+
+
+int linear_search(int *array, size_t size, int value);
+int binary_search(int *array, size_t size, int value);
+int _binary_search(int *array, size_t left, size_t right, int value);
+int jump_search(int *array, size_t size, int value);
+int interpolation_search(int *array, size_t size, int value);
+int exponential_search(int *array, size_t size, int value);
+int advanced_binary_recursive(int *array, size_t left, size_t right, int value);
+int advanced_binary(int *array, size_t size, int value);
+listint_t *jump_list(listint_t *list, size_t size, int value);
+skiplist_t *linear_skip(skiplist_t *list, int value);
+
+#endif
