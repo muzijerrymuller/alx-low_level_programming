@@ -2,10 +2,15 @@
 
 /**
  * linear_search - Searches for a value in an integer array
+ *
  * @array: input array
+ *
  * @size: Size of array
+ *
  * @value: Value to search for
- * Return: Index of value else -1 if not found
+ *
+ *
+ * Return: Index of value else -1 
  */
 
 int linear_search(int *array, size_t size, int value)
