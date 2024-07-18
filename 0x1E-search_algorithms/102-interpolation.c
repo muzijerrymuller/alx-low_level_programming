@@ -13,44 +13,31 @@
 * Return: the index where the value is found
 */
 
-int interpolation_search(int *arr, size_t len, int target)
+int interpolation_search(int *array, size_t size, int value)
 {
-    size_t position, start, end;
-    double factor;
+	size_t i, l, r;
 
-    if (arr == NULL)
-        return (-1);
+	if (array == NULL)
+		return (-1);
 
-    start = 0;
-    end = len - 1;
+	for (l = 0, r = size - 1; r >= l;)
+	{
+		i = l + (((double)(r - l) / (array[r] - array[l])) * (value - array[l]));
+		if (i < size)
+			printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+		else
+		{
+			printf("Value checked array[%ld] is out of range\n", i);
+			break;
+		}
 
-    while (len)
-    {
-        factor = (double)(end - start) / (arr[end] - arr[start]) * (target - arr[start]);
-        position = (size_t)(start + factor);
-        printf("Value checked arr[%d]", (int)position);
+		if (array[i] == value)
+			return (i);
+		if (array[i] > value)
+			r = i - 1;
+		else
+			l = i + 1;
+	}
 
-        if (position >= len)
-        {
-            printf(" is out of range\n");
-            break;
-        }
-        else
-        {
-            printf(" = [%d]\n", arr[position]);
-        }
-
-        if (arr[position] == target)
-            return ((int)position);
-
-        if (arr[position] < target)
-            start = position + 1;
-        else
-            end = position - 1;
-
-        if (start == end)
-            break;
-    }
-
-    return (-1);
+	return (-1);
 }
