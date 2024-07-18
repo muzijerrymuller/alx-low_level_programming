@@ -13,7 +13,7 @@
 * Return: the index where the value is found
 */
 
-int interpolation_search(int *arr, size_t len, int target);
+int interpolation_search(int *arr, size_t len, int target)
 {
     size_t position, start, end;
     double factor;
